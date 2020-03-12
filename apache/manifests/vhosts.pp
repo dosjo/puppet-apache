@@ -2,7 +2,12 @@
 #  Generates virtual hosts files based on templates
 #
 # @example
-#   apache::vhosts { 'namevar': }
+# apache::vhosts { 'namevar':
+#   port      => INT,
+#   subdomain => STR,
+#   admin     => STR,
+#   docroot   => STR,#
+# }  
 define apache::vhosts (
   Integer $port,
   String $subdomain,
